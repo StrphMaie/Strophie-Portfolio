@@ -1,0 +1,342 @@
+/* ==========================================
+   TABLET RESPONSIVE STYLES (tablet.css)
+   Targeting screens from 769px to 1024px
+   ========================================== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    :root {
+        --bg-dark: #12161f;
+        --bg-card: #1a202c;
+        --accent-blue: #3b82f6;
+        --accent-blue-hover: #2563eb;
+        --text-main: #ffffff;
+        --text-muted: #94a3b8;
+        --border-color: #2d3748;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        background-color: var(--bg-dark);
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-main);
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: var(--bg-dark);
+        opacity: 1 !important;
+        overflow-x: hidden;
+    }
+
+    #home {
+        padding-top: 10px;
+    }
+
+    /* ==========================================
+       1. HEADER & NAVIGATION (TABLET)
+       ========================================== */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: var(--bg-card, #121824);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 80px;
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    header nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        padding-left: 0.5rem;
+    }
+
+    header nav a:hover {
+        color: #f97316;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .logo img {
+        height: 45px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+        padding-left: 0;
+    }
+
+    .btn-contact-nav {
+        border: 1px solid var(--accent-blue);
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        color: #fd8700 !important;
+    }
+
+    /* ==========================================
+       2. HOME BANNER SECTION (TABLET)
+       ========================================== */
+    .hero-banner-section {
+        position: relative;
+        background: transparent !important;
+        padding: 120px 2rem 80px 2rem;
+        overflow: hidden;
+        color: #ffffff !important;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        flex-direction: row-reverse;
+    }
+
+    .hero-content {
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-brand-logo {
+        font-size: 2.2rem;
+        color: #3b82f6;
+        font-weight: 700;
+        margin-bottom: -1rem;
+    }
+
+    .hero-content h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 2.2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #ffffff !important;
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+    }
+
+    .hero-content h1 .script-subtitle {
+        font-size: 2.5rem;
+        color: #f97316;
+        margin-top: -1.5rem;
+    }
+
+    .hero-content p {
+        color: #fafafa !important;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        width: 100%;
+        margin-bottom: 1.8rem;
+    }
+
+    .hero-image-wrapper {
+        flex: 0 0 380px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .hero-glow-effect::before {
+        width: 350px;
+        height: 350px;
+        filter: blur(30px);
+    }
+
+    .hero-image-wrapper img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+    .hero-bottom-shape {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        width: 60%;
+        height: 50px;
+        background-color: #f97316;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        z-index: 2;
+    }
+
+    /* ==========================================
+       3. BUTTONS & SHARED COMPONENTS
+       ========================================== */
+    .btn-primary, .btn-outline {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .btn-get-started {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.9rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* ==========================================
+       4. ABOUT, EXPERIENCE & EDUCATION GRIDS
+       ========================================== */
+    .about-container,
+    .services-container,
+    .projects-container,
+    .certifications-container,
+    .contact-container {
+        max-width: 950px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    .about-main {
+        gap: 2rem;
+    }
+
+    .polaroid-wrapper {
+        flex: 0 0 240px;
+    }
+
+    .polaroid-img-box img {
+        height: 220px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.2rem;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+    }
+
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.2rem;
+    }
+
+    /* ==========================================
+       5. SERVICES & PROJECTS (2-COLUMN TABLET)
+       ========================================== */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+
+    .modal-content {
+        max-width: 85vw;
+    }
+
+    /* ==========================================
+       6. CERTIFICATIONS & CONTACT (TABLET)
+       ========================================== */
+    .certifications-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1.3fr !important;
+        gap: 2rem;
+    }
+
+    /* ==========================================
+       7. BACKGROUND VIDEO STYLES
+       ========================================== */
+    .video-background-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+        /* background-color: var(--bg-dark); */
+    }
+
+    #bg-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+    section {
+        background-color: transparent !important;
+    }
+
+    .about-card, 
+    .service-card, 
+    .project-card, 
+    .contact-card, 
+    .cert-card, 
+    .contact-form {
+        background-color: rgb(19, 28, 44) !important;
+        backdrop-filter: blur(10px);
+    }
+
+    #about, #services, #projects, #certifications, #contact {
+        scroll-margin-top: 90px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
